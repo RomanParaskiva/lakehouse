@@ -1,0 +1,90 @@
+@import '/assets/css/modules/hero.css';
+@import '/assets/css/modules/header.css';
+@import '/assets/css/owl.carousel.min.css';
+@import '/assets/css/modules/about.css';
+
+
+@font-face {
+    font-family: 'Karla';
+    src: local('Karla'), local('Karla-Regular'), url('./karla/karla.woff2') format('woff2'), url('karla.woff') format('woff'), url('karla.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: local('Karla Bold'), local('Karla-Bold'), url('./karla/karlabold.woff2') format('woff2'), url('karlabold.woff') format('woff'), url('karlabold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+* {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+section:not(.hero){
+    padding: 30px 1.5rem;
+}
+
+.owl-stage-outer {
+    height: 100% !important;    
+}
+
+.owl-stage {
+     height: 100%;   
+}
+
+.owl-item {
+    height: 100%;
+}
+
+.owl-nav {
+    height: 100%;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    z-index: 18;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    right: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    left: 20px
+}
+
+.owl-dots{
+    display: none;
+}
+
+.content-wrapper{
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
