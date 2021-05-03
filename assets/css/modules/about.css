@@ -1,5 +1,50 @@
+.about {
+    position: relative;
+}
+.about__bckg-img{
+    width: 50%;
+    height: 100%;
+    max-height: 314px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(/assets/img/about-background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+}
 .about p {
     font-family: 'Karla';
     font-size: 28px;
     font-weight: 400;
+    line-height: 50px;
+}
+
+.about h3 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.about .checkmark-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.about .checkmark-text:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.about .checkmark-text img {
+    width: 31px;
+    margin-right: 30px;
+}
+
+.about__subtext{
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 5px;
 }

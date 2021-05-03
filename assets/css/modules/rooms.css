@@ -1,0 +1,121 @@
+section .rooms {
+  background: linear-gradient(180deg, rgba(101, 177, 239, 0.19) 62.06%, rgba(255, 255, 255, 0) 100%);
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+.rooms__container-wrapper{
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.rooms__container {
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  width: 451px;
+  max-height: 800px;
+  padding-top: 400px;
+  margin-left: -450px;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translate();
+  transform-origin: right top;
+}
+
+.room-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 2px solid #65B1EF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8.34694px;
+  margin-right: 35px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.room-card__title {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin-top: 7px;
+  color: #000000;
+}
+
+.room-card__img-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.room-card__img {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.room-card__description {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(0, 0, 0, 0.84);
+  width: 100%;
+  text-align: start;
+  padding-left: 15px;
+}
+
+.room-card__price,
+.room-card__persons {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+
+.room-cars__request-btn {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 3.33878px 4.17347px rgba(0, 0, 0, 0.25));
+  border-radius: 16px;
+  background: rgba(101, 177, 239, 0.19);
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+  margin: 20px auto;
+
+  padding: 13px 23px;
+
+  color: #000000;
+}
