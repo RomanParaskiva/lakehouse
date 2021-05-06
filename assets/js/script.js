@@ -39,4 +39,35 @@ $(document).ready(function () {
         onChanged:setDots,
         dots: true
     })
+
+    const roomsContainer = $('.rooms__container ')
+    
+    roomsContainer.owlCarousel({
+        loop:true,
+        margin:10,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },            
+            960:{
+                items:2
+            },
+            1200:{
+                items:3
+            }
+        }
+    })
+    roomsContainer.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY>0) {
+            roomsContainer.trigger('next.owl');
+        } else {
+            roomsContainer.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+    
+
 });
