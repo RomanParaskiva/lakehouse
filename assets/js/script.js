@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 $(document).ready(function () {
-    console.log('Doc ready')
     $('.hero__slider-wrapper').owlCarousel({
         nav: true,
         lazyLoad: true,
@@ -68,6 +67,15 @@ $(document).ready(function () {
         }
         e.preventDefault();
     });
-    
 
+   
+
+
+      var $grid = $('.gallery__container').imagesLoaded( function() {
+        // init Masonry after all images have loaded
+        $grid.masonry({
+          // options...
+        });
+        $('.grid-item').imagefill();
+      });
 });

@@ -16,6 +16,7 @@ section.rooms {
   position: relative;
   overflow: hidden;
   height: 500px;
+  margin-bottom: 30px;
 }
 
 .rooms__container {

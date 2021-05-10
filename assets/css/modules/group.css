@@ -2,6 +2,7 @@ section.group{
   background: rgba(101, 177, 239, 0.19);
   position: relative;
   padding-bottom: 150px;
+  min-height: 840px;
 }
 
 .group h3{
@@ -22,7 +23,6 @@ font-style: normal;
 font-weight: normal;
 font-size: 24px;
 line-height: 28px;
-text-align: center;
 letter-spacing: 0.07em;
 
 color: #000000;
@@ -39,6 +39,12 @@ color: #000000;
 
 .group__content-item {
   margin-bottom: 20px;
+  display: flex;
+  align-items: start;
+}
+
+.group__content-item img {
+  margin-right: 20px;
 }
 
 .group__bg-img-1{

@@ -6,7 +6,8 @@
 @import '/assets/css/modules/rooms.css';
 @import '/assets/css/modules/services.css';
 @import '/assets/css/modules/group.css';
-
+@import '/assets/css/modules/gallery.css';
+@import '/assets/css/modules/contacts.css';
 
 
 @font-face {
@@ -48,6 +49,7 @@ h2 {
     font-size: 36px;
     letter-spacing: 2px;
     text-align: center;
+    margin: 0;
 }
 
 section:not(.hero) {
