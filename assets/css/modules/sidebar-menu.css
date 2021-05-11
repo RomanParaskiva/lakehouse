@@ -1,0 +1,110 @@
+#sidebar-menu{
+  width: 340px;
+  background-color: #fff;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all .3s ease;
+}
+
+#sidebar-menu.show{
+  transform: translateX(0);
+}
+
+#sidebar-menu ul {
+  list-style: none;
+  height: 90%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#sidebar-menu ul>li:not(:last-child){
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#sidebar-menu .close-menu-btn{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-link.phone{
+  font-family: Karla;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+
+.menu-link{
+  font-family: Rubik;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 17px;
+/* or 106% */
+
+letter-spacing: 0.07em;
+border-bottom: 1px solid rgba(101, 177, 239, 0.19);
+color: #000000;
+}
+
+.checkbox-group{
+  display: flex;
+  margin-top: auto;
+}
+
+.checkbox-group>div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.checkbox-group p{
+  font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 17px;
+/* or 106% */
+margin-bottom: 45px;
+letter-spacing: 0.07em;
+
+color: #000000;
+}
+
+.checkbox-group label>input{
+  display: none;
+}
+
+.checkbox-group label{
+  font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 17px;
+/* or 106% */
+margin-bottom: 45px;
+letter-spacing: 0.07em;
+
+color: #000000;
+}
+
+.checkbox-group label img{
+  margin-right: 18px;
+}

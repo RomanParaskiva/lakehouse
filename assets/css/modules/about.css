@@ -2,10 +2,8 @@
     position: relative;
 }
 
-.about h2 {
-    margin: 10px 0 60px;
-}
-.about__bckg-img{
+
+.about__bckg-img {
     width: 50%;
     height: 100%;
     max-height: 450px;
@@ -17,6 +15,7 @@
     background-size: contain;
     background-position: bottom right;
 }
+
 .about p {
     font-family: 'Karla';
     font-size: 28px;
@@ -42,7 +41,7 @@
     margin-bottom: 50px;
 }
 
-.about .checkmark-text:not(:last-child){
+.about .checkmark-text:not(:last-child) {
     margin-bottom: 30px;
 }
 
@@ -51,11 +50,51 @@
     margin-right: 30px;
 }
 
-.about__subtext{
+.about__subtext {
     display: block;
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 5px;
 }
 
+@media (max-width: 768px) {
+    .about{
+        background: linear-gradient(180deg, rgba(101, 177, 239, 0.19) 0%, rgba(255, 255, 255, 0) 100%);
+        overflow: hidden;
+    }
+    .about p {
+        font-size: 16px;
+        line-height: 17px;
+        /* or 142% */
 
+        letter-spacing: 0.07em;
+
+        color: rgba(0, 0, 0, 0.92);
+    }
+
+    .about .checkmark-text {
+        padding: 0;
+        font-size: 14px;
+        line-height: 17px;
+        align-items: flex-start;
+    }
+
+    .about__subtext {
+        font-size: 14px;
+    }
+
+    .about h3 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .about .checkmark-text img {
+        width: 16px;
+        margin-right: 15px;
+    }
+
+    .about__bckg-img{
+        width: 80%;
+        right: -70px;
+    }
+}

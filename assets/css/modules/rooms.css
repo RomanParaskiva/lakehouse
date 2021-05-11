@@ -119,3 +119,28 @@ color: #000000;
 .rooms p.rooms__black-text{
   font-weight: 500;
 }
+
+@media (max-width: 768px){
+  .room-cars__request-btn{
+    padding: 10px 15px;
+    width: unset;
+    font-size: 14px;
+  }
+
+  .rooms p{
+    font-size: 18px;
+  }
+
+  .room-card__description {
+    font-size: 14px;
+  }
+
+  .room-card__price, .room-card__persons{
+    font-size: 16px;
+  }
+
+  .rooms__container-wrapper{
+    height: auto;
+    margin-bottom: 0;
+  }
+}

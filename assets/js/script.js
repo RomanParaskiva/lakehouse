@@ -1,8 +1,32 @@
 "use strict"
 
 document.addEventListener('DOMContentLoaded', () => {
+    const headerMenuBtn = document.querySelector('.header__menu-btn'),
+    sidebarMenu = document.querySelector('#sidebar-menu'),
+    closeMenuBtn = document.querySelector('.close-menu-btn')
 
 
+    try {
+        headerMenuBtn.addEventListener('click', e => {
+            sidebarMenu.classList.add('show')
+        })
+
+        closeMenuBtn.addEventListener('click', e => {
+            sidebarMenu.classList.remove('show')
+        })
+
+        document.addEventListener('scroll', () => {
+            let scrollTop = window.scrollY
+            console.log(scrollTop)
+            if(scrollTop >= 100){
+                headerMenuBtn.classList.add('scroll');
+            }else{    
+                headerMenuBtn.classList.remove('scroll');
+            }
+        })
+    } catch (e) {
+        
+    }
 })
 
 $(document).ready(function () {
@@ -78,4 +102,6 @@ $(document).ready(function () {
         });
         $('.grid-item').imagefill();
       });
+
+
 });

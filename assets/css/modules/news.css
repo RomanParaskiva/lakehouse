@@ -34,3 +34,9 @@ border-radius: 5px;
 .news  .owl-carousel button.owl-dot.active {
   background: linear-gradient(0deg, #65B1EF, #65B1EF), linear-gradient(0deg, #65B1EF, #65B1EF), #65B1EF;
 }
+
+@media (max-width: 768px){
+  .news__item img {
+    height: auto;
+  }
+}
