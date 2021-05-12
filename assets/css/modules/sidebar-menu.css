@@ -108,3 +108,20 @@ color: #000000;
 .checkbox-group label img{
   margin-right: 18px;
 }
+
+@media (max-width: 768px) {
+  header .header__menu-btn{
+    padding: 10px 20px;
+  }
+  header .header__menu-btn img{
+    width: 30px;
+  }
+  #sidebar-menu .close-menu-btn img{
+    width: 15px;
+  }
+
+  .menu-link.phone{
+    font-size: 16px;
+  }
+
+}

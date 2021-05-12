@@ -128,7 +128,8 @@ color: #000000;
   }
 
   .rooms p{
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 28px;
   }
 
   .room-card__description {

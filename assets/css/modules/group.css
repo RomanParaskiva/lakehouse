@@ -66,3 +66,40 @@ color: #000000;
   right: 0;
   z-index: 1;
 }
+
+@media (max-width: 768px){
+  section.group{
+    height: auto;
+    padding-bottom: 30vw;
+    min-height: 0;
+  }
+  .group h3{
+    font-size: 16px;
+  }
+
+  .group__content{
+    padding-left: 0;
+  }
+
+  .group__content-item img {
+    width: 16px;
+  }
+
+  .group__content span{
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .group__bg-img-1{
+    width: 48vw;
+    opacity: 0.4;
+  }
+  .group__bg-img-2{
+    width: 50%;
+    opacity: 0.4;
+  }
+
+  .group__bg-img-3{
+    width: 60%;
+  }
+}

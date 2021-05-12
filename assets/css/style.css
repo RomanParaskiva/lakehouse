@@ -9,21 +9,7 @@
 @import '/assets/css/modules/gallery.css';
 @import '/assets/css/modules/contacts.css';
 @import '/assets/css/modules/sidebar-menu.css';
-
-
-@font-face {
-    font-family: 'Karla';
-    src: local('Karla'), local('Karla-Regular'), url('./karla/karla.woff2') format('woff2'), url('./karla/karla.woff') format('woff'), url('./karla/karla.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: local('Karla Bold'), local('Karla-Bold'), url('./karla/karlabold.woff2') format('woff2'), url('./karla/karlabold.woff') format('woff'), url('./karla/karlabold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
+@import '/assets/css/karla/karla.css';
 
 body {
     padding: 0;
@@ -36,6 +22,7 @@ body {
 
 * {
     outline: none;
+    box-sizing: border-box;
 }
 
 h1,
@@ -73,6 +60,6 @@ section:not(.hero) {
     }
 
     section:not(.hero){
-        padding: 50px 40px;
+        padding: 20px;
     }
 }

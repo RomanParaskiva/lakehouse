@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.addEventListener('scroll', () => {
             let scrollTop = window.scrollY
-            console.log(scrollTop)
             if(scrollTop >= 100){
                 headerMenuBtn.classList.add('scroll');
             }else{    
@@ -76,7 +75,7 @@ $(document).ready(function () {
                 items:2
             },            
             960:{
-                items:2
+                items:3
             },
             1200:{
                 items:3
@@ -95,13 +94,13 @@ $(document).ready(function () {
    
 
 
-      var $grid = $('.gallery__container').imagesLoaded( function() {
-        // init Masonry after all images have loaded
-        $grid.masonry({
-          // options...
-        });
-        $('.grid-item').imagefill();
-      });
+    //   var $grid = $('.gallery__container').imagesLoaded( function() {
+    //     // init Masonry after all images have loaded
+    //     $grid.masonry({
+    //       // options...
+    //     });
+    //     $('.grid-item').imagefill();
+    //   });
 
 
 });
