@@ -67,6 +67,24 @@ color: #000000;
   z-index: 1;
 }
 
+@media (max-width: 1100px) {
+  .group__bg-img-1{
+    height: 30%;
+  }
+
+  .group__bg-img-2{
+    width: 50%;
+  }
+
+  .group__bg-img-3{
+    width: 50%;
+  }
+
+  .group__content{
+    padding-left: 10%;
+  }
+}
+
 @media (max-width: 768px){
   section.group{
     height: auto;

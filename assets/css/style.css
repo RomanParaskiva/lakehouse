@@ -49,6 +49,12 @@ section:not(.hero) {
     margin: 0 auto;
 }
 
+@media (max-width: 1100px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     h2 {
         font-size: 18px;
