@@ -157,11 +157,12 @@ section.hero {
     .hero__content h1{
         font-size: 36px;
         margin-left: 0;
+        margin-top: 0;
     }
 
     .hero .owl-carousel .owl-nav button.owl-next, .hero .owl-carousel .owl-nav button.owl-prev{
-        width: 50px;
-        font-size: 100px;
+        width: 30px;
+        font-size: 50px;
     }
 
     .booking-request__wrapper{
@@ -178,5 +179,9 @@ section.hero {
     .booking-request{
         padding: 10px 15px;
     font-size: 16px;
+    }
+
+    .arrow-down{
+        bottom: 25px;
     }
 }
