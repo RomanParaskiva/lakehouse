@@ -3,7 +3,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const headerMenuBtn = document.querySelector('.header__menu-btn'),
     sidebarMenu = document.querySelector('#sidebar-menu'),
-    closeMenuBtn = document.querySelector('.close-menu-btn')
+    closeMenuBtn = document.querySelector('.close-menu-btn'),
+    requestBtns = [...document.querySelectorAll('[data-target="booking"')],
+    modal = document.querySelector('#modal'),
+    modalClose = document.querySelector('.modal__close')
+
+    requestBtns.forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault()
+        modal.style.display = 'flex'
+        document.body.style.overflowY = 'hidden'  
+        })
+    })
+
+    modalClose.addEventListener('click', e => {
+        e.preventDefault()
+        modal.style.display = ''
+        document.body.style.overflowY = ''  
+    })
 
 
     try {
@@ -23,9 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 headerMenuBtn.classList.remove('scroll');
             }
         })
-    } catch (e) {
-        
-    }
+    } catch (e) {}
 })
 
 $(document).ready(function () {
@@ -91,24 +106,30 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $('.modal__body-slider').owlCarousel({
+    var owl = $('.modal__body-slider');
+    owl.owlCarousel({
         loop:true,
         items: 1,
-        nav: true,
-        navText : ["",""],
+        dots: false,
+        nav: false,
+        navText: ["", ""],
         lazyLoad: true, 
         smartSpeed: 200,
         animateOut: 'fadeOut',
         mouseDrag: true,
         touchDrag: true,
         pullDrag: true
+    });
+    // Go to the next item
+    $('.modal__nav-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.modal__nav-prev').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
     })
 
-    const modalBodySlider = document.querySelector('.modal__body-slider'),
-        next = modalBodySlider.querySelector('.owl-next'),
-        prev = modalBodySlider.querySelector('.owl-prev')
-
-
-        next.setAttribute('aria-label', 'next')
-        prev.setAttribute('aria-label', 'prev')
+  
 });

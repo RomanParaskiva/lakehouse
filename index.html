@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/flexmasonry.css">
   <script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="booking-request__wrapper">
-              <a href="#" class="booking-request">Заявка на бронирование</a>
+              <a data-target="booking" href="#" class="booking-request">Заявка на бронирование</a>
             </div>
           </div>
           <div class="hero__slider-item">
@@ -110,10 +110,10 @@
             <img loading="lazy" src="/assets/img/hero-6.jpg" alt="" />
             <div class="hero__content">
               <div class="hero__content-wrapper">
-              <div class="hero__logo">
-                <img loading="lazy" src="/assets/img/logo.svg" alt="logo" />
-              </div>
-              <h1>Дом у озера</h1>
+                <div class="hero__logo">
+                  <img loading="lazy" src="/assets/img/logo.svg" alt="logo" />
+                </div>
+                <h1>Дом у озера</h1>
               </div>
             </div>
 
@@ -126,10 +126,10 @@
             <img loading="lazy" src="/assets/img/hero-7.jpg" alt="" />
             <div class="hero__content">
               <div class="hero__content-wrapper">
-              <div class="hero__logo">
-                <img loading="lazy" src="/assets/img/logo.svg" alt="logo" />
-              </div>
-              <h1>Дом у озера</h1>
+                <div class="hero__logo">
+                  <img loading="lazy" src="/assets/img/logo.svg" alt="logo" />
+                </div>
+                <h1>Дом у озера</h1>
               </div>
             </div>
 
@@ -203,7 +203,7 @@
               </div>
               <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
               <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
-              <a class="room-cars__request-btn" href="#">заявка на бронирование</a>
+              <a data-target="booking" class="room-cars__request-btn" href="#">заявка на бронирование</a>
             </div>
             <div class="room-card">
               <p class="room-card__title">Двухместный номер</p>
@@ -212,7 +212,17 @@
               </div>
               <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
               <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
-              <a class="room-cars__request-btn" href="#">заявка на бронирование</a>
+              <a  data-target="booking" class="room-cars__request-btn" href="#">заявка на бронирование</a>
+            </div>
+           
+            <div class="room-card">
+              <p class="room-card__title">Двухместный номер</p>
+              <div class="room-card__img-wrapper">
+                <img class="room-card__img" src="/assets/img/app-1-188x126 1.png" alt="room-1">
+              </div>
+              <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
+              <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
+              <a  data-target="booking" class="room-cars__request-btn" href="#">заявка на бронирование</a>
             </div>
             <div class="room-card">
               <p class="room-card__title">Двухместный номер</p>
@@ -221,7 +231,7 @@
               </div>
               <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
               <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
-              <a class="room-cars__request-btn" href="#">заявка на бронирование</a>
+              <a  data-target="booking" class="room-cars__request-btn" href="#">заявка на бронирование</a>
             </div>
             <div class="room-card">
               <p class="room-card__title">Двухместный номер</p>
@@ -230,16 +240,7 @@
               </div>
               <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
               <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
-              <a class="room-cars__request-btn" href="#">заявка на бронирование</a>
-            </div>
-            <div class="room-card">
-              <p class="room-card__title">Двухместный номер</p>
-              <div class="room-card__img-wrapper">
-                <img class="room-card__img" src="/assets/img/app-1-188x126 1.png" alt="room-1">
-              </div>
-              <span class="room-card__description">Стоимость: <span class="room-card__price">180 евро</span></span>
-              <span class="room-card__description">Кол-во человек: <span class="room-card__persons">2</span></span>
-              <a class="room-cars__request-btn" href="#">заявка на бронирование</a>
+              <a  data-target="booking" class="room-cars__request-btn" href="#">заявка на бронирование</a>
             </div>
           </div>
         </div>
@@ -402,18 +403,19 @@
       <h2>Фотогалерея</h2>
       <div class="gallery__container">
         </figure>
-        <a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <figure><img class="gallery__item"
-            src="/assets/img/hero-5.jpg" alt=""></figure></a>
+        <a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg">
+          <figure><img class="gallery__item" src="/assets/img/hero-5.jpg" alt=""></figure>
+        </a>
         <figure><a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item"
-            src="/assets/img/hero-5.jpg" alt=""></a></figure>
+              src="/assets/img/hero-5.jpg" alt=""></a></figure>
         <figure><a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"><img class="gallery__item"
-            src="/assets/img/hero-3.jpg" alt=""></a></figure>
+              src="/assets/img/hero-3.jpg" alt=""></a></figure>
         <figure><a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item"
-            src="/assets/img/hero-5.jpg" alt=""></a></figure>
+              src="/assets/img/hero-5.jpg" alt=""></a></figure>
         <figure><a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item"
-            src="/assets/img/hero-5.jpg" alt=""></a></figure>
+              src="/assets/img/hero-5.jpg" alt=""></a></figure>
         <figure><a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item"
-            src="/assets/img/hero-5.jpg" alt=""></a></figure>
+              src="/assets/img/hero-5.jpg" alt=""></a></figure>
         <!-- <a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item" src="/assets/img/hero-5.jpg"
             alt=""></a>
         <a class="grid-item" data-fslightbox href="/assets/img/hero-5.jpg"> <img class="gallery__item" src="/assets/img/hero-5.jpg"
@@ -477,151 +479,163 @@
       </div>
     </section>
 
-    <div class="modal" id="modal">
-      <div class="modal__sidebar">
-        <div class="modal__sidebar-room active">
-          <div class="modal__sidebar-header">
-            Двухместный номер
+    <div class="modal__wrapper" id="modal">
+      <div class="modal">
+        <div class="modal__sidebar">
+          <div class="modal__sidebar-room active">
+            <div class="modal__sidebar-header">
+              Двухместный номер
+            </div>
+            <div class="modal__sidebar-image">
+              <img src="/assets/img/app-1-188x126 1.png">
+            </div>
           </div>
-          <div class="modal__sidebar-image">
-            <img src="/assets/img/app-1-188x126 1.png">
+          <div class="modal__sidebar-room">
+            <div class="modal__sidebar-header">
+              Двухместный номер
+            </div>
+            <div class="modal__sidebar-image">
+              <img src="/assets/img/app-1-188x126 1.png">
+            </div>
+          </div>
+          <div class="modal__sidebar-room">
+            <div class="modal__sidebar-header">
+              Двухместный номер
+            </div>
+            <div class="modal__sidebar-image">
+              <img src="/assets/img/app-1-188x126 1.png">
+            </div>
+          </div>
+          <div class="modal__sidebar-room">
+            <div class="modal__sidebar-header">
+              Двухместный номер
+            </div>
+            <div class="modal__sidebar-image">
+              <img src="/assets/img/app-1-188x126 1.png">
+            </div>
+          </div>
+          <div class="modal__sidebar-room">
+            <div class="modal__sidebar-header">
+              Двухместный номер
+            </div>
+            <div class="modal__sidebar-image">
+              <img src="/assets/img/app-1-188x126 1.png">
+            </div>
           </div>
         </div>
-        <div class="modal__sidebar-room">
-          <div class="modal__sidebar-header">
-            Двухместный номер
+
+        <div class="modal__body">
+          <a href="#" class="modal__close">
+            <img src="/assets/img/modal-close.svg" alt="">
+          </a>
+
+          <div class="modal__body-header">
+            Трёхместный номер
           </div>
-          <div class="modal__sidebar-image">
-            <img src="/assets/img/app-1-188x126 1.png">
+
+         
+            <div class="modal__body-slider owl-carousel owl-theme">
+              <img src="/assets/img/app-1-188x126 1.png" alt="" height="300">
+              <img src="/assets/img/app-1-188x126 1.png" alt="" height="300">
+              <img src="/assets/img/app-1-188x126 1.png" alt="" height="300">
+              <img src="/assets/img/app-1-188x126 1.png" alt="" height="300">
+            </div>
+
+
+          <div class="modal__body-description-container">
+            <h4>Описание номера:</h4>
+            <span class="modal__body-desc">
+              Трехместный номер (предназначен для проживания 3-4-х человек). Два номера.
+            </span>
+            <div class="modal__body-services">
+              <div class="modal__services-item">
+                <img src="/assets/img/checkmark 23.svg" alt="">
+                <span>Постельное белье</span>
+              </div>
+              <div class="modal__services-item">
+                <img src="/assets/img/checkmark 23.svg" alt="">
+                <span>Кухня</span>
+              </div>
+              <div class="modal__services-item">
+                <img src="/assets/img/checkmark 23.svg" alt="">
+                <span>Полотенца</span>
+              </div>
+              <div class="modal__services-item">
+                <img src="/assets/img/checkmark 23.svg" alt="">
+                <span>Телевизор</span>
+              </div>
+              <div class="modal__services-item">
+                <img src="/assets/img/checkmark 23.svg" alt="">
+                <span>Душ</span>
+              </div>
+            </div>
           </div>
+
+          <div class="modal__price-wrapper">
+            Стоимость:
+            <span class="modal__body-price">
+              110 евро/ сутки
+            </span>
+          </div>
+
+          <div class="modal__body-services paid">
+            <h4>Дополнительные услуги:</h4>
+            <div class="modal__paid-wrapper">
+              <label for="breakfast">
+                <input type="checkbox" name="breakfast" id="breakfast">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Завтрак</span> - <span class="paid-service-price">8
+                    евро</span></span>
+              </label>
+              <label for="extraBed">
+                <input type="checkbox" name="extraBed" id="extraBed">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Дополнительное спальное место</span> - <span
+                    class="paid-service-price">15 евро</span></span>
+              </label>
+              <label for="babyCrib">
+                <input type="checkbox" name="babyCrib" id="babyCrib">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Детская кроватка</span> - <span
+                    class="paid-service-price">бесплатно</span></span>
+              </label>
+              <label for="gasHearth">
+                <input type="checkbox" name="gasHearth" id="gasHearth">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Газовый очаг</span> - <span class="paid-service-price">3 евро /
+                    час </span></span>
+              </label>
+              <label for="charcoal ">
+                <input type="checkbox" name="charcoal " id="charcoal ">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Угли для гриля</span> - <span class="paid-service-price">5 евро /
+                    мешок</span></span>
+              </label>
+              <label for="grill">
+                <input type="checkbox" name="grill" id="grill">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Гриль (разовый)</span> - <span class="paid-service-price">5 евро /
+                    комплект</span></span>
+              </label>
+              <label for="sauna">
+                <input type="checkbox" name="sauna" id="sauna">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Сауна</span> - <span class="paid-service-price">15 евро /
+                    час</span></span>
+              </label>
+              <label for="electricStove">
+                <input type="checkbox" name="electricStove" id="electricStove">
+                <img src="/assets/img/checkbox.svg" alt="">
+                <span><span class="paid-service-name">Электрическая плита</span> - <span class="paid-service-price">3
+                    евро / час</span></span>
+              </label>
+            </div>
+          </div>
+
+          <button title="далее" class="modal__btn-next">далее</button>
         </div>
-        <div class="modal__sidebar-room">
-          <div class="modal__sidebar-header">
-            Двухместный номер
-          </div>
-          <div class="modal__sidebar-image">
-            <img src="/assets/img/app-1-188x126 1.png">
-          </div>
-        </div>
-        <div class="modal__sidebar-room">
-          <div class="modal__sidebar-header">
-            Двухместный номер
-          </div>
-          <div class="modal__sidebar-image">
-            <img src="/assets/img/app-1-188x126 1.png">
-          </div>
-        </div>
-        <div class="modal__sidebar-room">
-          <div class="modal__sidebar-header">
-            Двухместный номер
-          </div>
-          <div class="modal__sidebar-image">
-            <img src="/assets/img/app-1-188x126 1.png">
-          </div>
-        </div>
+
       </div>
-
-      <div class="modal__body">
-        <a href="#" class="modal__close">
-          <img src="/assets/img/modal-close.svg" alt="">
-        </a>
-
-        <div class="modal__body-header">
-          Трёхместный номер 
-        </div>
-
-        <div class="modal__body-slider owl-carousel">
-          <img src="/assets/img/app-1-188x126 1.png" alt=""  height="300">
-          <img src="/assets/img/app-1-188x126 1.png" alt=""  height="300">
-          <img src="/assets/img/app-1-188x126 1.png" alt=""  height="300">
-          <img src="/assets/img/app-1-188x126 1.png" alt=""  height="300">
-        </div>
-
-        <div class="modal__body-description-container">
-          <h4>Описание номера:</h4>
-          <p class="modal__body-desc">
-            Трехместный номер (предназначен для проживания 3-4-х человек). Два номера.
-          </p>
-          <div class="modal__body-services">
-            <div class="modal__services-item">
-              <img src="/assets/img/checkmark 23.svg" alt="">
-              <span>Постельное белье</span>
-            </div>
-            <div class="modal__services-item">
-              <img src="/assets/img/checkmark 23.svg" alt="">
-              <span>Кухня</span>
-            </div>
-            <div class="modal__services-item">
-              <img src="/assets/img/checkmark 23.svg" alt="">
-              <span>Полотенца</span>
-            </div>
-            <div class="modal__services-item">
-              <img src="/assets/img/checkmark 23.svg" alt="">
-              <span>Телевизор</span>
-            </div>
-            <div class="modal__services-item">
-              <img src="/assets/img/checkmark 23.svg" alt="">
-              <span>Душ</span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          Стоимость:
-          <span  class="modal__body-price">
-            110 евро/ сутки
-          </span>
-        </div>
-
-        <div class="modal__body-services paid">
-          <h4>Дополнительные услуги:</h4>
-          <div class="modal__paid-wrapper">
-            <label for="breakfast">
-              <input type="checkbox" name="breakfast" id="breakfast">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Завтрак</span> - <span class="paid-service-price">8 евро</span></span>
-            </label>
-            <label for="extraBed">
-              <input type="checkbox" name="extraBed" id="extraBed">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Дополнительное спальное место</span> - <span class="paid-service-price">15 евро</span></span>
-            </label>
-            <label for="babyCrib">
-              <input type="checkbox" name="babyCrib" id="babyCrib">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Детская кроватка</span> - <span class="paid-service-price">бесплатно</span></span>
-            </label>
-            <label for="gasHearth">
-              <input type="checkbox" name="gasHearth" id="gasHearth">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Газовый очаг</span> - <span class="paid-service-price">3 евро / час </span></span>
-            </label>
-            <label for="charcoal ">
-              <input type="checkbox" name="charcoal " id="charcoal ">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Угли для гриля</span> - <span class="paid-service-price">5 евро / мешок</span></span>
-            </label>
-            <label for="grill">
-              <input type="checkbox" name="grill" id="grill">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Гриль (разовый)</span> - <span class="paid-service-price">5 евро / комплект</span></span>
-            </label>
-            <label for="sauna">
-              <input type="checkbox" name="sauna" id="sauna">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Сауна</span> - <span class="paid-service-price">15 евро / час</span></span>
-            </label>
-            <label for="electricStove">
-              <input type="checkbox" name="electricStove" id="electricStove">
-              <img src="/assets/img/checkbox.svg" alt="">
-              <span><span class="paid-service-name">Электрическая плита</span> - <span class="paid-service-price">3 евро / час</span></span>
-            </label>
-          </div>
-        </div>
-
-        <button title="далее" class="modal__btn-next">далее</button>
-      </div>
-      
     </div>
   </main>
 
