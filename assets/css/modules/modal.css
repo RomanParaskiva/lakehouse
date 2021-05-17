@@ -75,12 +75,15 @@
 
 .modal__body {
   padding: 24px 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 80%;
   overflow-y: scroll;
 }
 
+.modal__body.active {
+  display: flex;
+}
 .modal__close {
   position: absolute;
   top: 20px;

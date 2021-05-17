@@ -481,6 +481,11 @@
 
     <div class="modal__wrapper" id="modal">
       <div class="modal">
+        <a href="#" class="modal__close">
+          <img src="/assets/img/modal-close.svg" alt="">
+        </a>
+
+
         <div class="modal__sidebar">
           <div class="modal__sidebar-room active">
             <div class="modal__sidebar-header">
@@ -524,12 +529,9 @@
           </div>
         </div>
 
-        <div class="modal__body">
-          <a href="#" class="modal__close">
-            <img src="/assets/img/modal-close.svg" alt="">
-          </a>
+        <div class="modal__body active" data-step="1">
 
-          <div class="modal__body-header">
+          <div class="modal__body-header" data-room-header="Трёхместный номер">
             Трёхместный номер
           </div>
 
@@ -633,6 +635,12 @@
           </div>
 
           <button title="далее" class="modal__btn-next">далее</button>
+        </div>
+
+        <div class="modal__body" data-step="2">
+          <div class="modal__body-header">
+            Выберите дату:
+          </div>
         </div>
 
       </div>
