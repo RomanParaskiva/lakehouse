@@ -237,6 +237,17 @@
   display: none;
 }
 
+.modal__paid-wrapper .checked.show, .modal__paid-wrapper .unchecked.show{
+ width: 20px;
+ height: 20px;
+ transition: .2s ease;
+}
+
+.modal__paid-wrapper .checked, .modal__paid-wrapper .unchecked{
+  width: 0px;
+  height: 0px;
+}
+
 .modal__paid-wrapper img {
   width: 20px;
   margin-right: 6px;
@@ -279,3 +290,4 @@
   
   color: #000000;
 }
+

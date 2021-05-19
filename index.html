@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/flexmasonry.css">
-  <script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  
 </head>
 
 <body>
@@ -37,28 +38,28 @@
             <p>Язык:</p>
 
             <label for="ru">
-              <img src="/assets/img/checkbox.svg" alt="">
+               <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" src="/assets/img/checkbox-checked.svg" alt="">
               Русский
 
               <input type="checkbox" name="ru" id="ru" checked>
             </label>
 
             <label for="en">
-              <img src="/assets/img/checkbox.svg" alt="">
+               <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" src="/assets/img/checkbox-checked.svg" alt="">
               English
 
               <input type="checkbox" name="en" id="en">
             </label>
 
             <label for="su">
-              <img src="/assets/img/checkbox.svg" alt="">
+               <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" src="/assets/img/checkbox-checked.svg" alt="">
               Suomi
 
               <input type="checkbox" name="su" id="su">
             </label>
 
             <label for="china">
-              <img src="/assets/img/checkbox.svg" alt="">
+               <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" src="/assets/img/checkbox-checked.svg" alt="">
               China
               <input type="checkbox" name="china" id="china">
             </label>
@@ -101,7 +102,7 @@
             </div>
 
             <div class="booking-request__wrapper">
-              <a href="#" class="booking-request">Заявка на бронирование</a>
+              <a href="#" data-target="booking" class="booking-request">Заявка на бронирование</a>
             </div>
 
           </div>
@@ -118,7 +119,7 @@
             </div>
 
             <div class="booking-request__wrapper">
-              <a href="#" class="booking-request">Заявка на бронирование</a>
+              <a href="#" data-target="booking" class="booking-request">Заявка на бронирование</a>
             </div>
           </div>
           <div class="hero__slider-item">
@@ -134,7 +135,7 @@
             </div>
 
             <div class="booking-request__wrapper">
-              <a href="#" class="booking-request">Заявка на бронирование</a>
+              <a href="#" data-target="booking" class="booking-request">Заявка на бронирование</a>
             </div>
           </div>
         </div>
@@ -585,49 +586,50 @@
             <div class="modal__paid-wrapper">
               <label for="breakfast">
                 <input type="checkbox" name="breakfast" id="breakfast">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
+               
                 <span><span class="paid-service-name">Завтрак</span> - <span class="paid-service-price">8
                     евро</span></span>
               </label>
               <label for="extraBed">
                 <input type="checkbox" name="extraBed" id="extraBed">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Дополнительное спальное место</span> - <span
                     class="paid-service-price">15 евро</span></span>
               </label>
               <label for="babyCrib">
                 <input type="checkbox" name="babyCrib" id="babyCrib">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Детская кроватка</span> - <span
                     class="paid-service-price">бесплатно</span></span>
               </label>
               <label for="gasHearth">
                 <input type="checkbox" name="gasHearth" id="gasHearth">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Газовый очаг</span> - <span class="paid-service-price">3 евро /
                     час </span></span>
               </label>
               <label for="charcoal ">
                 <input type="checkbox" name="charcoal " id="charcoal ">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Угли для гриля</span> - <span class="paid-service-price">5 евро /
                     мешок</span></span>
               </label>
               <label for="grill">
                 <input type="checkbox" name="grill" id="grill">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Гриль (разовый)</span> - <span class="paid-service-price">5 евро /
                     комплект</span></span>
               </label>
               <label for="sauna">
                 <input type="checkbox" name="sauna" id="sauna">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Сауна</span> - <span class="paid-service-price">15 евро /
                     час</span></span>
               </label>
               <label for="electricStove">
                 <input type="checkbox" name="electricStove" id="electricStove">
-                <img src="/assets/img/checkbox.svg" alt="">
+                 <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked" hidden src="/assets/img/checkbox-checked.svg" alt="">
                 <span><span class="paid-service-name">Электрическая плита</span> - <span class="paid-service-price">3
                     евро / час</span></span>
               </label>
@@ -652,6 +654,9 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/owl.carousel.min.js"></script>
   <script src="/assets/js/fslightbox.js"></script>
+  <script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="/assets/js/script.js"></script>
 
 </body>

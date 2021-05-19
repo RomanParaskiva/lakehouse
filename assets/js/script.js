@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault()
         modal.style.display = 'flex'
         document.body.style.overflowY = 'hidden'  
+        handleModal()
         })
     })
 
@@ -21,6 +22,33 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = ''
         document.body.style.overflowY = ''  
     })
+
+    const showCheckedImg = (id, modal) => {
+        const parent = modal.querySelector(`label[for="${id}"]`),
+              img = parent.querySelector('img.checked')
+              img.classList.contains('show') ? img.classList.remove('show') : img.classList.add('show') 
+              img.hidden = !img.hidden 
+    }
+
+    const showUncheckedImg = (id, modal) => {
+        const parent = modal.querySelector(`label[for="${id}"]`),
+              img = parent.querySelector('img.unchecked')
+              img.classList.contains('show') ? img.classList.remove('show') : img.classList.add('show') 
+              img.hidden = !img.hidden 
+    }
+
+    const handleModal = () => {
+        const modal = document.querySelector('.modal'),
+              modalInputs = [...modal.querySelectorAll('input[type="checkbox"]')],
+              
+
+              modalInputs.forEach(item => {
+                item.addEventListener('change', e => {
+                   showCheckedImg(e.target.name, modal) 
+                   showUncheckedImg(e.target.name, modal)
+                })
+              })
+    }
 
 
     try {
