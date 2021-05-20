@@ -40,13 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleModal = () => {
         const modal = document.querySelector('.modal'),
               modalInputs = [...modal.querySelectorAll('input[type="checkbox"]')],
-              
+              modalNextBtn = modal.querySelector('.modal__btn-next'),
+              modalBodys = [...modal.querySelectorAll('.modal__body')],
+              modalData = {}
+
+              let step = 1
 
               modalInputs.forEach(item => {
                 item.addEventListener('change', e => {
                    showCheckedImg(e.target.name, modal) 
                    showUncheckedImg(e.target.name, modal)
+                   modalData[e.target.name] = true
                 })
+              })
+
+              modalNextBtn.addEventListener('click', e => {
+                  modalBodys[0].classList.remove('active')
+                  modalBodys[1].classList.add('active')
               })
     }
 
@@ -159,5 +169,12 @@ $(document).ready(function () {
         owl.trigger('prev.owl.carousel', [300]);
     })
 
-  
+    $('input[name="daterange"]').daterangepicker({
+        "startDate": new Date('dMY'),
+        "endDate": "05/20/2021",
+        "opens": "center",
+        "drops": "auto"
+    }, function(start, end, label) {
+      console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+    });
 });
