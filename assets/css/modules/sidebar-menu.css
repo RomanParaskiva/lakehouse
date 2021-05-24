@@ -24,10 +24,14 @@
 #sidebar-menu a {
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 #sidebar-menu ul>li:not(:last-child){
-  height: 80px;
+  height: 50px;
   display: flex;
   align-items: center;
 }
@@ -93,6 +97,7 @@ color: #000000;
 }
 
 .checkbox-group label{
+  display: flex;
   font-family: Rubik;
 font-style: normal;
 font-weight: normal;
@@ -118,6 +123,7 @@ color: #000000;
   }
   #sidebar-menu .close-menu-btn img{
     width: 15px;
+    height: 15px;
   }
 
   .menu-link.phone{

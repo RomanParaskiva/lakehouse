@@ -20,12 +20,12 @@
 <body>
   <header>
     <div class="header__menu-btn">
-      <img loading="lazy" src="/assets/img/menu-btn.svg" width="40" height="50" />
+      <img loading="lazy" src="/assets/img/menu-btn.svg" width="30" height="30" />
     </div>
     <div id="sidebar-menu">
       <ul>
         <li>
-          <div class="close-menu-btn"><img src="/assets/img/close-btn.png" loading="lazy" width="30"></div>
+          <div class="close-menu-btn"><img src="/assets/img/close-btn.png" loading="lazy" width="25" height="25"></div>
         </li>
         <li class="menu-link phone"><a href="tel:+358458886058">+358 45 888 6058</a></li>
         <li class="menu-link"><a href="#about">О нас</a></li>
@@ -39,32 +39,36 @@
             <p>Язык:</p>
 
             <label for="ru">
-              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked"
-                src="/assets/img/checkbox-checked.svg" alt="">
+              <img class="unchecked" src="/assets/img/checkbox.svg" alt="" hidden> 
+              <img class="checked show"
+                src="/assets/img/checkbox-checked.svg" alt="" >
               Русский
 
               <input type="checkbox" name="ru" id="ru" checked>
             </label>
 
             <label for="en">
-              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked"
-                src="/assets/img/checkbox-checked.svg" alt="">
+              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> 
+              <img class="checked"
+                src="/assets/img/checkbox-checked.svg" alt="" hidden>
               English
 
               <input type="checkbox" name="en" id="en">
             </label>
 
             <label for="su">
-              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked"
-                src="/assets/img/checkbox-checked.svg" alt="">
+              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> 
+              <img class="checked"
+                src="/assets/img/checkbox-checked.svg" alt="" hidden>
               Suomi
 
               <input type="checkbox" name="su" id="su">
             </label>
 
             <label for="china">
-              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> <img class="checked"
-                src="/assets/img/checkbox-checked.svg" alt="">
+              <img class="unchecked show" src="/assets/img/checkbox.svg" alt=""> 
+              <img class="checked"
+                src="/assets/img/checkbox-checked.svg" alt="" hidden>
               China
               <input type="checkbox" name="china" id="china">
             </label>
@@ -680,7 +684,7 @@
                 class="people-plus">+</span>
             </div>
           </div>
-          <button data-step="3" title="далее" class="modal__btn-next">далее</button>
+          <button data-step="3" title="далее" class="modal__btn-next step-2">далее</button>
         </div>
 
 
@@ -719,10 +723,12 @@
             <h3>Комментарий к бронированию:</h3>
             <textarea width="100%" name="comment" id="comment" rows="10" resize="none "></textarea>
             <span>* Заявка не является подтверждением бронирования, для подтверждения с Вами свяжется менеджер.</span>
+
+            <button title="далее" type="submit" class="modal__send-request-btn">Заявка на бронирование</button>
           </form>
 
 
-          <button data-step="2" title="далее" class="modal__btn-next">Заявка на бронирование</button>
+         
         </div>
       </div>
     </div>

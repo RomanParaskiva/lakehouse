@@ -55,7 +55,7 @@
 }
 
 .modal__sidebar-header {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
@@ -71,6 +71,18 @@
 
 .modal__sidebar-image img {
   width: 100%;
+}
+
+#sidebar-menu .checked.show,
+#sidebar-menu .unchecked.show {
+  width: 20px;
+  height: 20px;
+}
+
+#sidebar-menu .checked,
+#sidebar-menu .unchecked {
+  width: 0;
+  height: 0;
 }
 
 .modal__body {
@@ -94,7 +106,7 @@
 }
 
 .modal__body-header {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -110,7 +122,6 @@
   height: 100%;
   position: relative;
 }
-
 
 .modal__body-slider.owl-carousel .owl-stage-outer {
   margin: 0 50px;
@@ -131,19 +142,17 @@
 
 .modal__body-slider.owl-carousel .owl-nav button.owl-next {
   background: unset;
-  background-image: url('../../img/right-arrow-2\ 1.svg');
+  background-image: url("../../img/right-arrow-2\ 1.svg");
   width: 50px;
   height: 50px;
 }
 
 .modal__body-slider.owl-carousel .owl-nav button.owl-prev {
   background: unset;
-  background-image: url('../../img/right-arrow-2\ 2.svg');
+  background-image: url("../../img/right-arrow-2\ 2.svg");
   width: 50px;
   height: 50px;
 }
-
-
 
 .modal__body-slider img {
   width: auto;
@@ -151,7 +160,7 @@
 }
 
 .modal__body-description-container h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -162,7 +171,7 @@
 }
 
 .modal__body-desc {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -192,7 +201,7 @@
 }
 
 .modal__services-item span {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -204,7 +213,7 @@
 
 .modal__price-wrapper {
   margin-top: 15px;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -214,7 +223,7 @@
 }
 
 .modal__body-price {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -242,7 +251,7 @@
 .modal__paid-wrapper .unchecked.show {
   width: 20px;
   height: 20px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .modal__paid-wrapper .checked,
@@ -262,8 +271,8 @@
   margin-bottom: 10px;
 }
 
-.modal__paid-wrapper label>span {
-  font-family: 'Karla', sans-serif;
+.modal__paid-wrapper label > span {
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -273,12 +282,13 @@
   color: #000000;
 }
 
-.modal__btn-next {
+.modal__btn-next,
+.modal__send-request-btn {
   background: rgba(101, 177, 239, 0.19);
   border-radius: 15px;
   width: 100%;
   max-width: 200px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -296,7 +306,6 @@
 
 .date-input__wrapper {
   position: relative;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
@@ -304,7 +313,7 @@
 }
 
 .date-input__wrapper span {
-  font-family: Karla;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -316,9 +325,15 @@
 .date-input__wrapper input {
   width: max-content;
   margin: 0 auto;
-  border: 1px solid #65B1EF;
+  border: 1px solid #65b1ef;
   border-radius: 5px;
   padding: 10px 15px;
+  display: none;
+}
+
+.date-input__wrapper .cancelBtn,
+.date-input__wrapper .applyBtn {
+  display: none;
 }
 
 .modal__body-people {
@@ -329,7 +344,6 @@
   width: 280px;
   display: flex;
   align-items: center;
-  font-family: Karla;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -343,7 +357,7 @@
 
 .modal__body-people-item .people-plus,
 .modal__body-people-item .people-minus {
-  color: #65B1EF;
+  color: #65b1ef;
 }
 
 .modal__body-people-item input {
@@ -351,7 +365,6 @@
   outline: none;
   width: 50px;
   text-align: center;
-  font-family: Karla;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -361,7 +374,7 @@
 
 .daterangepicker td.start-date,
 .daterangepicker td.end-date {
-  background-color: #65B1EF;
+  background-color: #65b1ef;
 }
 
 .modal__body form {
@@ -379,14 +392,14 @@
   margin: 0 auto;
 }
 
-.modal__inputs-wrapper>div {
+.modal__inputs-wrapper > div {
   display: flex;
   margin-bottom: 20px;
   align-content: center;
 }
 
 .modal__inputs-wrapper label {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -395,7 +408,7 @@
 }
 
 .modal__inputs-wrapper input {
-  border: 1px solid #65B1EF;
+  border: 1px solid #65b1ef;
   box-sizing: border-box;
   border-radius: 5px;
   width: 100%;
@@ -405,7 +418,7 @@
 }
 
 .modal__body form h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -429,7 +442,7 @@
   display: inline-flex;
 }
 
-.modal__body form .chk-label img{
+.modal__body form .chk-label img {
   width: 20px;
   margin-right: 10px;
 }
@@ -439,50 +452,120 @@
   border-radius: 10px;
 }
 
-.modal__body form>span {
-  font-family: 'Rubik', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 19px;
+.modal__body form > span {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
 
-color: #000000;
+  color: #000000;
 }
 
 @media (max-width: 768px) {
   .modal {
-    flex-direction: column;
+    display: unset;
+    /* flex-direction: column; */
+    height: 100vh;
   }
 
-  .modal__sidebar{
+  .modal__sidebar {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 380px;
+    height: auto;
     overflow-x: auto;
     overflow-y: unset;
-    max-width:fit-content;
+    max-width: fit-content;
     padding: 50px 10px 10px;
   }
 
-  .modal__sidebar-room{
+  .modal__sidebar-room {
     height: 150px;
     margin-right: 10px;
   }
 
-  .modal__sidebar-image{
+  .modal__sidebar-image {
     width: 150px;
   }
 
   .modal__body {
     width: 100%;
+    height: 100%;
+    padding: 24px 20px 230px;
   }
 
-  .modal__body-slider.owl-carousel .owl-stage-outer{
+  .modal__body-slider.owl-carousel .owl-stage-outer {
     margin: 0;
   }
 
-  .modal__body-services.paid .modal__paid-wrapper{
+  .modal__body-services.paid .modal__paid-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .modal__btn-next,
+  .modal__send-request-btn {
+    font-size: 16px;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+  .modal__body-slider img {
+    height: auto;
+  }
+
+  .modal__inputs-wrapper input {
+    width: auto;
+  }
+
+  .modal__body-people-item {
+    font-size: 14px;
+  }
+
+  .daterangepicker {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal__sidebar-header {
+    margin-bottom: 10px;
+  }
+
+  .modal__sidebar-room {
+    height: auto;
+  }
+
+  .modal__sidebar-image {
+    width: 80px;
+  }
+
+  .modal__body-header {
+    font-size: 20px;
+  }
+
+  .modal__body-desc {
+    font-size: 13px;
+  }
+  .modal__services-item span {
+    font-size: 12px;
+  }
+
+  .modal__services-item img {
+    width: 15px;
+  }
+
+  .modal__price-wrapper {
+    font-size: 14px;
+  }
+
+  .modal__paid-wrapper label > span {
+    font-size: 13px;
+  }
+
+  .modal__paid-wrapper .checked.show,
+  .modal__paid-wrapper .unchecked.show {
+    width: 15px;
+    height: 15px;
   }
 }

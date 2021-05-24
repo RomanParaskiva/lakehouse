@@ -83,6 +83,19 @@ color: #000000;
   .group__content{
     padding-left: 10%;
   }
+
+  .group__content-item{
+    margin-bottom: 10px;
+  }
+
+  .group__content span {
+    font-size: 18px;
+  }
+
+  .group__content-item img{
+    margin: 0 15px;
+    width: 25px;
+  }
 }
 
 @media (max-width: 768px){

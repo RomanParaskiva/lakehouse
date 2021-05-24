@@ -6,22 +6,54 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenuBtn = document.querySelector('.close-menu-btn'),
         requestBtns = [...document.querySelectorAll('[data-target="booking"')],
         modal = document.querySelector('#modal'),
-        modalClose = document.querySelector('.modal__close')
+        modalClose = document.querySelector('.modal__close'),
+        sideBarChkbox = [...document.querySelectorAll('.checkbox-group')],
+        modalPeopleInputs = [...modal.querySelectorAll('.modal__body-people-item')]
 
-    requestBtns.forEach(item => {
-        item.addEventListener('click', e => {
-            e.preventDefault()
-            modal.style.display = 'flex'
-            document.body.style.overflowY = 'hidden'
-            handleModal()
+    try {
+        requestBtns.forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault()
+                modal.style.display = 'flex'
+                document.body.style.overflowY = 'hidden'
+                handleModal()
+            })
         })
-    })
 
-    modalClose.addEventListener('click', e => {
-        e.preventDefault()
-        modal.style.display = ''
-        document.body.style.overflowY = ''
-    })
+        modalClose.addEventListener('click', e => {
+            e.preventDefault()
+            modal.style.display = ''
+            document.body.style.overflowY = ''
+            handleModal(1)
+        })
+
+        modalPeopleInputs.forEach(item => {
+            const input = item.querySelector('.people-input'),
+                plus = item.querySelector('.people-plus'),
+                minus = item.querySelector('.people-minus')
+
+            plus.addEventListener('click', e => {
+                input.value < 10 ? input.value++ : input.value = 10
+            })
+
+            minus.addEventListener('click', e => {
+                console.log(input.value)
+                if (input.name == "peoples") {
+                    input.value > 1 ? input.value-- : 0
+                } else {
+                    input.value > 0 ? input.value-- : 0
+                }
+            })
+        })
+
+        sideBarChkbox.forEach(item => {
+            item.addEventListener('change', e => {
+                showCheckedImg(e.target.name, document.querySelector('#sidebar-menu'))
+                showUncheckedImg(e.target.name, document.querySelector('#sidebar-menu'))
+            })
+        })
+    } catch (e) { }
+
 
     const showCheckedImg = (id, modal) => {
         const parent = modal.querySelector(`label[for="${id}"]`),
@@ -42,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalInputs = [...modal.querySelectorAll('input[type="checkbox"]')],
             modalNextBtns = [...modal.querySelectorAll('.modal__btn-next')],
             modalBodys = [...modal.querySelectorAll('.modal__body')],
-            modalPeopleInputs = [...modal.querySelectorAll('.modal__body-people-item')],
+            modalSendRequestBtn = modal.querySelector('.modal__send-request-btn'),
             modalData = {
                 roomId: 1,
                 grill: false,
@@ -52,10 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 gasHearth: false,
                 babyCrib: false,
                 extraBed: false,
-                breakfast: false
+                breakfast: false,
+                peoples: 2,
+                childs: 0,
+                animals: 0
             }
 
         let step = 1
+
+        if (id == 1) {
+            modalBodys.map(item => {
+                item.dataset.step == id ? item.classList.add('active') : item.classList.remove('active')
+                modalInputs.forEach(item => {
+                    item.checked = false
+                    const parent = modal.querySelector(`label[for="${item.name}"]`),
+                        img = parent.querySelector('img.checked')
+                    img.classList.remove('show')
+                    img.hidden = true
+                })
+            })
+            const modalPeopleInputs = [...modal.querySelectorAll('.modal__body-people-item')]
+            modalPeopleInputs.forEach(item => {
+                item.querySelector('input').value = modalData[item.querySelector('input').name]
+            })
+        }
 
         modalInputs.forEach(item => {
             item.addEventListener('change', e => {
@@ -68,11 +120,38 @@ document.addEventListener('DOMContentLoaded', () => {
         modalNextBtns.forEach(item => {
             item.addEventListener('click', e => {
                 const id = e.target.dataset.step
-                console.log(e.target)
+                if (item.classList.contains('step-2')) {
+                    modalPeopleInputs.forEach(item => {
+                        modalData[item.querySelector('input[type="number"]').name] = item.querySelector('input').value
+                    })
+                    modalData['range'] = $('.drp-selected').html()
+                }
                 modalBodys.map(item => {
                     item.dataset.step == id ? item.classList.add('active') : item.classList.remove('active')
                 })
+                console.log(modalData)
             })
+        })
+
+        modalSendRequestBtn.addEventListener('click', e => {
+            e.preventDefault()
+            const form = modal.querySelector('form'),
+                inputs = [...form.querySelectorAll('input')]
+
+                inputs.forEach(item => {
+                    if(item.type == "text" || item.type == "tel" || item.type == "email"){
+                        modalData[item.name] = item.value
+                    } 
+
+                    if(item.type == "checkbox"){
+                        modalData[item.name] = item.checked
+                    }                
+                })
+
+            const textarea = form.querySelector('textarea')
+            modalData[textarea.name] = textarea.value
+
+                console.log(modalData)
         })
 
         $('input[name="daterange"]').daterangepicker({
@@ -95,25 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modalData['end'] = end.format('DD-MM-YYYY')
         });
 
-        modalPeopleInputs.forEach(item => {
-            console.log(item)
-            const input = item.querySelector('.people-input'),
-                plus = item.querySelector('.people-plus'),
-                minus = item.querySelector('.people-minus')
+        $('input[name="daterange"]').click();
 
-            plus.addEventListener('click', e => {
-                input.value < 10 ? input.value++ : input.value = 10
-            })
-
-            minus.addEventListener('click', e => {
-                console.log(input.value)
-                if (input.name == "peoples") {
-                    input.value > 1 ? input.value-- : 0
-                } else {
-                    input.value > 0 ? input.value-- : 0
-                }
-            })
-        })
+       
 
 
     }

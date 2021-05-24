@@ -1165,8 +1165,8 @@
             $(document).off('.daterangepicker');
             $(window).off('.daterangepicker');
             this.container.hide();
-            this.element.trigger('hide.daterangepicker', this);
             this.isShowing = false;
+            this.element.trigger('hide.daterangepicker', this);
         },
 
         toggle: function(e) {
@@ -1188,7 +1188,7 @@
                 target.closest(this.container).length ||
                 target.closest('.calendar-table').length
                 ) return;
-            this.hide();
+            // this.hide();
             this.element.trigger('outsideClick.daterangepicker', this);
         },
 
@@ -1220,7 +1220,8 @@
 
                 if (!this.alwaysShowCalendars)
                     this.hideCalendars();
-                this.clickApply();
+               //this.clickApply();
+               this.updateCalendars();
             }
         },
 
@@ -1530,7 +1531,7 @@
         keydown: function(e) {
             //hide on tab or enter
             if ((e.keyCode === 9) || (e.keyCode === 13)) {
-                // this.hide();
+                this.hide();
             }
 
             //hide on esc and prevent propagation
@@ -1538,7 +1539,7 @@
                 e.preventDefault();
                 e.stopPropagation();
 
-                // this.hide();
+                this.hide();
             }
         },
 
