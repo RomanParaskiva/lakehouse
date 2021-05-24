@@ -84,6 +84,7 @@
 .modal__body.active {
   display: flex;
 }
+
 .modal__close {
   position: absolute;
   top: 20px;
@@ -237,6 +238,19 @@
   display: none;
 }
 
+.modal__paid-wrapper .checked.show,
+.modal__paid-wrapper .unchecked.show {
+  width: 20px;
+  height: 20px;
+  transition: .2s ease;
+}
+
+.modal__paid-wrapper .checked,
+.modal__paid-wrapper .unchecked {
+  width: 0px;
+  height: 0px;
+}
+
 .modal__paid-wrapper img {
   width: 20px;
   margin-right: 6px;
@@ -276,6 +290,199 @@
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  
+
   color: #000000;
+}
+
+.date-input__wrapper {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border-bottom: 1px solid rgba(101, 177, 239, 0.19);
+}
+
+.date-input__wrapper span {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+
+.date-input__wrapper input {
+  width: max-content;
+  margin: 0 auto;
+  border: 1px solid #65B1EF;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.modal__body-people {
+  margin-top: 25px;
+}
+
+.modal__body-people-item {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.modal__body-people-item .people-minus {
+  margin-left: auto;
+}
+
+.modal__body-people-item .people-plus,
+.modal__body-people-item .people-minus {
+  color: #65B1EF;
+}
+
+.modal__body-people-item input {
+  border: none;
+  outline: none;
+  width: 50px;
+  text-align: center;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.daterangepicker td.start-date,
+.daterangepicker td.end-date {
+  background-color: #65B1EF;
+}
+
+.modal__body form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.modal__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.modal__inputs-wrapper>div {
+  display: flex;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+.modal__inputs-wrapper label {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.modal__inputs-wrapper input {
+  border: 1px solid #65B1EF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  margin-left: auto;
+  height: 30px;
+}
+
+.modal__body form h3 {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.modal__body form input[type="checkbox"] {
+  display: none;
+}
+
+.modal__body form .chk-label {
+  margin-right: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #000000;
+  display: inline-flex;
+}
+
+.modal__body form .chk-label img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.modal__body form textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal__body form>span {
+  font-family: 'Rubik', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 19px;
+
+color: #000000;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+  }
+
+  .modal__sidebar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 380px;
+    overflow-x: auto;
+    overflow-y: unset;
+    max-width:fit-content;
+    padding: 50px 10px 10px;
+  }
+
+  .modal__sidebar-room{
+    height: 150px;
+    margin-right: 10px;
+  }
+
+  .modal__sidebar-image{
+    width: 150px;
+  }
+
+  .modal__body {
+    width: 100%;
+  }
+
+  .modal__body-slider.owl-carousel .owl-stage-outer{
+    margin: 0;
+  }
+
+  .modal__body-services.paid .modal__paid-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
