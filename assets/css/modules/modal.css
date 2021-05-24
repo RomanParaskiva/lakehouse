@@ -55,7 +55,7 @@
 }
 
 .modal__sidebar-header {
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
@@ -93,7 +93,7 @@
 }
 
 .modal__body-header {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -150,7 +150,7 @@
 }
 
 .modal__body-description-container h4 {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -161,7 +161,7 @@
 }
 
 .modal__body-desc {
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -191,7 +191,7 @@
 }
 
 .modal__services-item span {
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -203,7 +203,7 @@
 
 .modal__price-wrapper {
   margin-top: 15px;
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -213,7 +213,7 @@
 }
 
 .modal__body-price {
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -249,7 +249,7 @@
 }
 
 .modal__paid-wrapper label>span {
-  font-family: Karla;
+  font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -264,7 +264,7 @@
   border-radius: 15px;
   width: 100%;
   max-width: 200px;
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
